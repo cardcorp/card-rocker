@@ -20,7 +20,7 @@ Please note that, unfortunately, it's not trivial to use this setup. You have to
 
 ```sh
 docker run \
-  -v '/home/username/.ssh/id_rsa:/home/docker/.ssh-external/id_rsa:ro \
+  -v '/home/username/.ssh/id_rsa:/home/docker/.ssh-external/id_rsa:ro' \
   --rm -ti cardcorp/r-ssh
 ```
 
@@ -34,7 +34,7 @@ Alternatively, you can start R as `docker` after re-mounting the keys by:
 
 ```sh
 docker run \
-  -v '/home/username/.ssh/id_rsa:/home/docker/.ssh-external/id_rsa:ro \
+  -v '/home/username/.ssh/id_rsa:/home/docker/.ssh-external/id_rsa:ro' \
   --rm -ti cardcorp/r-ssh \
   sh -c "mount -o nonempty -a;su docker -c \"R --vanilla\""
 ```
