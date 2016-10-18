@@ -3,6 +3,9 @@ FROM rocker/r-base:latest
 
 MAINTAINER Gergely Daroczi <gergely.daroczi@card.com>
 
+## gnupg is needed to add new key
+RUN apt-get update && apt-get install -y gnupg2
+
 ## Install Java 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
       | tee /etc/apt/sources.list.d/webupd8team-java.list \
