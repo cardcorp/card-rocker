@@ -1,5 +1,5 @@
 ## Start with the official rocker image (lightweight Debian)
-FROM cardcorop/r-aws:latest
+FROM cardcorp/r-aws:latest
 
 MAINTAINER Gergely Daroczi <gergely.daroczi@card.com>
 
