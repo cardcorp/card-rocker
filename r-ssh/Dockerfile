@@ -12,7 +12,7 @@ RUN apt-get update \
 ## Install bindfs to be able to mount SSH keys from the host with the right permissions
 ## NOTE: you stil need to "mount -a" as root when starting the container (no autostart)
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends bindfs module-init-tools \
+  && apt-get install -y --no-install-recommends bindfs kmod \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/ \
   && mkdir /home/docker/.ssh \
