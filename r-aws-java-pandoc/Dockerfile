@@ -21,6 +21,10 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
     && apt-get clean \
     && R CMD javareconf
 
+## make sure Java can be found in rApache and other daemons not looking in R ldpaths
+RUN echo "/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/" > /etc/ld.so.conf.d/rJava.conf
+RUN /sbin/ldconfig
+
 ## Install LaTeX
 ## Source: https://registry.hub.docker.com/u/rocker/hadleyverse/dockerfile/
 RUN apt-get update \
