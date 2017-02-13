@@ -60,6 +60,7 @@ RUN mkdir -p /opt/pandoc \
 ## Install related R packages
 RUN install2.r --error \
     rJava \
+    AWR \
     knitr \
     rmarkdown \
     pander \
