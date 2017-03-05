@@ -20,4 +20,4 @@ kinesis_consumer(
             flog.info('This is a high frequency updater call running every 10 seconds'))),
 
     checkpointing = 1,
-    logfile = 'app.log')
+    logfile = '/logs/logger.log')
