@@ -14,4 +14,3 @@ deb https://cloudfront.debian.net/debian-security/ testing/updates main\n'\
  | tee /etc/apt/sources.list \
  && echo "deb https://cloudfront.debian.net/debian/ sid main" \
  | tee /etc/apt/sources.list.d/debian-unstable.list
- | tee /etc/apt/sources.list
