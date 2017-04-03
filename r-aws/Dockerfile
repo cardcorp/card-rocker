@@ -11,4 +11,7 @@ RUN apt-get update && apt-get install -y apt-transport-https \
 RUN echo 'deb https://cloudfront.debian.net/debian/ testing main\n\
 deb https://cloudfront.debian.net/debian/ testing-updates main\n\
 deb https://cloudfront.debian.net/debian-security/ testing/updates main\n'\
-  | tee /etc/apt/sources.list
+ | tee /etc/apt/sources.list \
+ && echo "deb https://cloudfront.debian.net/debian/ sid main" \
+ | tee /etc/apt/sources.list.d/debian-unstable.list
+ | tee /etc/apt/sources.list
